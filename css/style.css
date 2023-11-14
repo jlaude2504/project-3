@@ -79,3 +79,7 @@ img {
   height: 100%;
   width: auto;
 }
+
+#map {
+  height: 100%;
+}

@@ -1,0 +1,21 @@
+#main-navbar,
+#navbar-container,
+ul,
+li,
+a,
+body,
+#resume-title,
+h2,
+p,
+img,
+#akuma,
+.games,
+#show,
+.cast {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}

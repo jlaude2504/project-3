@@ -1,0 +1,81 @@
+#main-navbar {
+  background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);;
+  overflow: hidden;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+#navbar-container {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+#main-navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  float: left;
+}
+
+#main-navbar ul li {
+  float: left;
+  position: relative;
+  right: 50%;
+  display: block;
+}
+
+#main-navbar ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+#main-navbar ul li a:hover {
+  background-color: #000;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+#resume-title {
+  font-family: "Courier New", Courier, monospace;
+  font-style: italic;
+}
+
+h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+}
+
+p {
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+img {
+  border: 5px solid #fff;
+}
+
+#akuma {
+  margin-left: 35%;
+}
+
+.games {
+  margin-top: 1%;
+}
+
+#show {
+  margin-top: 2%;
+  height: 50%;
+  width: auto;
+}
+
+.cast {
+  height: 100%;
+  width: auto;
+}

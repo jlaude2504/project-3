@@ -1,27 +1,22 @@
-// Initialize and add the map
-let map;
+// map.js
 
-async function initMap() {
-  // The location of Uluru
-  const position = { lat: -25.344, lng: 131.031 };
-  // Request needed libraries.
-  //@ts-ignore
-  const { Map } = await google.maps.importLibrary("maps");
-  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+// Replace 'YOUR_API_KEY' with your actual Google Maps API key
+const apiKey = 'YOUR_API_KEY';
 
-  // The map, centered at Uluru
-  map = new Map(document.getElementById("map"), {
-    zoom: 4,
-    center: position,
-    mapId: "MAP_ID",
-  });
+function initMap() {
+    // Specify the coordinates for Chinatown, Chicago
+    const chinatownCoordinates = { lat: 41.850691, lng: -87.634049 };
 
-  // The marker, positioned at Uluru
-  const marker = new AdvancedMarkerElement({
-    map: map,
-    position: position,
-    title: "Uluru",
-  });
+    // Create a new map centered around Chinatown
+    const map = new google.maps.Map(document.getElementById('map'), {
+        center: chinatownCoordinates,
+        zoom: 14 // Adjust the zoom level as needed
+    });
+
+    // Add a marker to the map
+    const marker = new google.maps.Marker({
+        position: chinatownCoordinates,
+        map: map,
+        title: 'Chinatown, Chicago' // Marker title
+    });
 }
-
-initMap();

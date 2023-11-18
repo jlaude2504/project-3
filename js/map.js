@@ -1,22 +1,41 @@
-// map.js
+const apiKey = "AIzaSyBM1F-BpX660SBK3-Vw9O9f7AEvTAIH8rI";
 
-// Replace 'YOUR_API_KEY' with your actual Google Maps API key
-const apiKey = 'YOUR_API_KEY';
+async function initMap() {
+    var el = document.getElementById('frame');
+    var myLocation = new google.maps.LatLng(41.850691, -87.634049);
+    var mapOptions = {
+        center: myLocation,
+        zoom: 14,
+        mapTypeId: google.maps.MapTypeId.SATELLITE,
+        mapTypeControlOptions: {
+            position: google.maps.ControlPosition.BOTTOM_CENTER
+        }
+    };
 
-function initMap() {
+    // Create a new map centered around Chinatown
+    var map = new google.maps.Map(el, mapOptions);
+
     // Specify the coordinates for Chinatown, Chicago
     const chinatownCoordinates = { lat: 41.850691, lng: -87.634049 };
 
-    // Create a new map centered around Chinatown
-    const map = new google.maps.Map(document.getElementById('map'), {
-        center: chinatownCoordinates,
-        zoom: 14 // Adjust the zoom level as needed
-    });
-
     // Add a marker to the map
-    const marker = new google.maps.Marker({
+    var marker = new google.maps.Marker({
         position: chinatownCoordinates,
         map: map,
+        animation: google.maps.Animation.DROP,
         title: 'Chinatown, Chicago' // Marker title
     });
+
+    var contentString = "<h1>Chinatown, Chicago</h1>";
+
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+
+    google.maps.event.addListener(marker, 'click', function () {
+        infowindow.open(map, marker);
+    });
 }
+
+// Call the initMap function when the window is loaded
+google.maps.event.addDomListener(window, 'load', initMap);

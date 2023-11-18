@@ -80,6 +80,23 @@ img {
   width: auto;
 }
 
-#map {
-  height: 100%;
+.pad{
+  padding: 11%;
+  color: white;
+}
+
+#border {
+  width: 700px;
+  height: 450px;
+  background-color: rgb(150, 111, 255);
+  margin: auto;
+  overflow: hidden;
+  color: black;
+}
+#frame {
+  width: 700px;
+  height: 500px;
+  background-color: #000000;
+  margin: 30px auto;
+  color: black;
 }

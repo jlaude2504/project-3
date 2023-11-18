@@ -88,7 +88,7 @@ img {
 #border {
   width: 700px;
   height: 450px;
-  background-color: rgb(150, 111, 255);
+  background:linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);;
   margin: auto;
   overflow: hidden;
   color: black;
@@ -99,4 +99,54 @@ img {
   background-color: #000000;
   margin: 30px auto;
   color: black;
+}
+
+/* Media query for small screens */
+
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+
+  #main-navbar {
+    font-size: 20px;
+  }
+
+  #main-navbar ul li a {
+    padding: 8px 15px;
+  }
+
+  #show {
+    width: 100%;
+    height: auto;
+  }
+
+  .cast {
+    height: auto;
+    width: 100%;
+  }
+}
+
+/* Media query for medium and larger screens */
+
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  #main-navbar {
+    font-size: 25px;
+  }
+
+  #main-navbar ul li a {
+    padding: 10px 20px;
+  }
+
+  #show {
+    margin-top: 2%;
+  }
+
+  .cast {
+    margin-top: 1%;
+  }
 }
